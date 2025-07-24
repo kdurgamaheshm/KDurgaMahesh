@@ -12,7 +12,6 @@ import Certifications from "./components/Certifications";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import RateProfile from "./components/RateProfile";
 
 function App() {
     const contactRef = useRef(null);

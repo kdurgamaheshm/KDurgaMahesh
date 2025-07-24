@@ -168,10 +168,11 @@ const Contact = forwardRef(({ inputRef, formVisible, setFormVisible }, ref) => {
                             className="w-full px-4 py-2 border border-green-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 resize-none"
                         ></textarea>
 
-                        <ReCAPTCHA
-                            sitekey="6LcgdIUrAAAAAB9dSXfX2sTEmAIyP10TnfVhSHZK"
-                            onChange={() => setCaptchaValid(true)}
-                        />
+                       <ReCAPTCHA
+                              sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+                              onChange={() => setCaptchaValid(true)}
+                            />
+
 
                         <button
                             type="submit"

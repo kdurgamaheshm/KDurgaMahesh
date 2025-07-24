@@ -32,11 +32,11 @@ const Contact = forwardRef(({ inputRef, formVisible, setFormVisible }, ref) => {
         setIsLoading(true);
         try {
             await emailjs.send(
-                "service_ls96895",
-                "template_9zudkqs",
-                form,
-                "3ZOHlT2PnnS4ScYTK"
-            );
+  import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  form,
+  import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+);
             setSubmitted(true);
             setForm({ name: "", email: "", message: "" });
             setTimeout(() => setSubmitted(false), 4000);

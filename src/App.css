@@ -42,4 +42,17 @@ html {
 html, body {
   overflow-x: hidden;
 }
+.skills {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+/* 3. Ensure text doesn't overflow */
+.skills {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 

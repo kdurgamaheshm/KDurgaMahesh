@@ -18,7 +18,7 @@ function Footer() {
                     <img
                         src={logo}
                         alt="KDM Logo"
-                        className="w-21 h-21 sm:w-20 sm:h-20 object-contain rounded-xl border-4 border-white shadow-lg"
+                        className="w-20 h-20 sm:w-20 sm:h-20 object-contain rounded-xl border-4 border-white shadow-lg"
                     />
                     <div>
                         <h3 className="text-xl sm:text-2xl font-bold mb-2">Kammampalli Durga Mahesh</h3>

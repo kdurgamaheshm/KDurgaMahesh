@@ -14,7 +14,6 @@ function Skills() {
         { name: "REST APIs", percent: 85 },
         { name: "MongoDB", percent: 70 },
         { name: "MySQL", percent: 85 },
-        { name: "Postman", percent: 90 },
         { name: "JWT Auth", percent: 85 },
         { name: "ServiceNow CSA", percent: 80 },
     ];

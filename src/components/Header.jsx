@@ -12,6 +12,11 @@ function Header() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    // Prevent background scroll when menu is open
+    useEffect(() => {
+        document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
+    }, [isMenuOpen]);
+
     const navLinks = [
         { id: "bout", label: "About" },
         { id: "skills", label: "Skills" },
@@ -29,7 +34,7 @@ function Header() {
                     : "bg-gradient-to-r from-white/60 to-white/30 backdrop-blur-md"
             }`}
         >
-            <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
                 {/* Logo + Name */}
                 <a href="#home" className="flex items-center gap-3 group">
                     <img
@@ -75,21 +80,23 @@ function Header() {
                 </div>
             </div>
 
-            {/* Mobile Dropdown Menu */}
-            {isMenuOpen && (
-                <div className="md:hidden bg-green-50 shadow-inner backdrop-blur-md px-6 py-4 space-y-4 transition-all duration-300">
-                    {navLinks.map((item) => (
-                        <a
-                            key={item.id}
-                            href={`#${item.id}`}
-                            onClick={() => setIsMenuOpen(false)}
-                            className="block text-green-800 font-medium hover:text-green-600 transition-colors duration-200"
-                        >
-                            {item.label}
-                        </a>
-                    ))}
-                </div>
-            )}
+            {/* Mobile Menu Overlay */}
+            <div
+                className={`md:hidden transition-all duration-300 overflow-hidden bg-green-50 backdrop-blur-md shadow-lg ${
+                    isMenuOpen ? "max-h-96 py-4 px-6 space-y-4" : "max-h-0 py-0 px-0"
+                }`}
+            >
+                {navLinks.map((item) => (
+                    <a
+                        key={item.id}
+                        href={`#${item.id}`}
+                        onClick={() => setIsMenuOpen(false)}
+                        className="block text-green-800 font-medium hover:text-green-600 transition-colors duration-200"
+                    >
+                        {item.label}
+                    </a>
+                ))}
+            </div>
         </header>
     );
 }

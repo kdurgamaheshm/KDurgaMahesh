@@ -18,7 +18,7 @@ function Header() {
     }, [isMenuOpen]);
 
     const navLinks = [
-        { id: "bout", label: "About" },
+        { id: "about", label: "About" },
         { id: "skills", label: "Skills" },
         { id: "projects", label: "Projects" },
         { id: "certifications", label: "Certifications" },

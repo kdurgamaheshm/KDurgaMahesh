@@ -20,7 +20,7 @@ function Skills() {
     ];
 
     return (
-        <section id="skills" className="bg-gradient-to-b from-green-50 to-white py-16 px-4 sm:px-6 lg:px-8">
+        <section id="skills" className="bg-gradient-to-br from-green-100 to-white py-16 px-4 sm:px-6 lg:px-8 w-auto overflow-x-hidden">
             <div className="max-w-6xl mx-auto text-center">
                 <h2 className="text-3xl sm:text-4xl font-bold text-green-700 mb-12">
                     Skills & Technologies
